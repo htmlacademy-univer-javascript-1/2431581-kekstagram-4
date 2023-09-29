@@ -13,7 +13,7 @@ checkLenght('проверяемая строка', 10);
 
 function isPalindrom (inputString) {
   let reverseString = '';
-  let newString = inputString.replaceAll(' ', '');
+  const newString = inputString.replaceAll(' ', '');
   for (let i = newString.length - 1; i >= 0; i--) {
     reverseString += newString[i];
   }
@@ -30,14 +30,14 @@ isPalindrom('Кекс');
 isPalindrom('Лёша на полке клопа нашёл ');
 
 function getCount (inputParam) {
-  let newString = inputParam.toString();
+  const newString = inputParam.toString();
   let number = '';
   for (let i = 0; i < newString.length; i++){
-    if (!Number.isNaN(parseInt(newString[i]))) {
+    if (!Number.isNaN(parseInt(newString[i], 10))) {
       number += newString[i];
     }
   }
-  return parseInt(number);
+  return parseInt(number, 10);
 }
 getCount('2023 год');
 getCount('ECMAScript 2022');
