@@ -11,7 +11,8 @@ const isPalindrom = (inputString) => {
     reverseString += newString[i];
   }
   return (newString === reverseString);
-}
+};
+
 isPalindrom('топот');
 isPalindrom('ДовОд');
 isPalindrom('Кекс');
@@ -26,7 +27,8 @@ const getCount = (inputParam) => {
     }
   }
   return parseInt(number, 10);
-}
+};
+
 getCount('2023 год');
 getCount('ECMAScript 2022');
 getCount('1 кефир, 0.5 батона');
