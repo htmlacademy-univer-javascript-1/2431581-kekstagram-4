@@ -1,35 +1,23 @@
-function checkLenght (inputString, maxLenght) {
-  if (inputString.length <= maxLenght) {
-    return true;
-  }
-  else {
-    return false;
-  }
-}
+const checkLenght = (inputString, maxLenght) => (inputString.length <= maxLenght);
 
 checkLenght('проверяемая строка', 20);
 checkLenght('проверяемая строка', 18);
 checkLenght('проверяемая строка', 10);
 
-function isPalindrom (inputString) {
+const isPalindrom = (inputString) => {
   let reverseString = '';
-  const newString = inputString.replaceAll(' ', '');
+  const newString = inputString.replaceAll(' ', '').toLowerCase();
   for (let i = newString.length - 1; i >= 0; i--) {
     reverseString += newString[i];
   }
-  if (newString.toLowerCase() === reverseString.toLowerCase()) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return (newString === reverseString);
 }
 isPalindrom('топот');
 isPalindrom('ДовОд');
 isPalindrom('Кекс');
 isPalindrom('Лёша на полке клопа нашёл ');
 
-function getCount (inputParam) {
+const getCount = (inputParam) => {
   const newString = inputParam.toString();
   let number = '';
   for (let i = 0; i < newString.length; i++){
