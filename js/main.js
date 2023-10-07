@@ -59,4 +59,6 @@ const createPhoto = () => ({
 const getPhoto = () => {
   const photo = Array.from({length: 25}, createPhoto);
   return photo;
-}
+};
+
+getPhoto();
