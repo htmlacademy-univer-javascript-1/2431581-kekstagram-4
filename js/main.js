@@ -18,7 +18,7 @@ const description = [
 ];
 
 
-let getRandomNumber = (min, max) => {
+const getRandomNumber = (min, max) => {
   const lower = Math.ceil(Math.min(min, max));
   const upper = Math.floor(Math.max(min, max));
   const result = Math.random() * (upper - lower + 1) + lower;
@@ -50,10 +50,11 @@ const createComment = () => ({
 
 const createPhoto = () => ({
   id: generate(),
-  url: 'photos/' + createPhoto.id + '.jpg',
+  url: 'photos/' + generate() + '.jpg',
   description: description[getRandomNumber(0, description.length - 1)],
   likes: getRandomNumber(15, 200),
   comments: Array.from({length: getRandomNumber(0, 5)}, createComment)
 });
 
 const photo = Array.from({length: 4}, createPhoto);
+console.log(photo);
