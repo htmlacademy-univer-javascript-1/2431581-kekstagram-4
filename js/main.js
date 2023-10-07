@@ -24,7 +24,7 @@ const getRandomNumber = (min, max) => {
   const result = Math.random() * (upper - lower + 1) + lower;
 
   return Math.floor(result);
-}
+};
 
 function createRandom(min, max) {
   const number = [];
@@ -43,14 +43,14 @@ const generate = createRandom(1, 25);
 
 const createComment = () => ({
   id: generate(),
-  avatar: 'img/avatar-' + getRandomNumber(1, 6) + '.svg',
+  avatar: `img/avatar-${getRandomNumber(1, 6)}svg`,
   message: messages[getRandomNumber(0, messages.length-1)],
   name: name[getRandomNumber(0, name.length - 1)]
 });
 
 const createPhoto = () => ({
   id: generate(),
-  url: 'photos/' + generate() + '.jpg',
+  url: `photos/${generate()}.jpg`,
   description: description[getRandomNumber(0, description.length - 1)],
   likes: getRandomNumber(15, 200),
   comments: Array.from({length: getRandomNumber(0, 5)}, createComment)
