@@ -56,4 +56,7 @@ const createPhoto = () => ({
   comments: Array.from({length: getRandomNumber(0, 30)}, createComment)
 });
 
-const photo = Array.from({length: 25}, createPhoto);
+const getPhoto = () => {
+  const photo = Array.from({length: 25}, createPhoto);
+  return photo;
+}
