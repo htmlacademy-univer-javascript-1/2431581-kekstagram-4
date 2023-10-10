@@ -17,6 +17,27 @@ const description = [
   'Просто фоточки)'
 ];
 
+const COUNT_PHOTO = 25;
+
+const Id = {
+  MIN: 1,
+  MAX: 25
+};
+
+const Likes = {
+  MAX: 15,
+  MIN: 200
+};
+
+const Comments = {
+  MIN: 0,
+  MAX: 30
+};
+
+const Avatar = {
+  MIN: 1,
+  MAX: 6
+};
 
 const getRandomNumber = (min, max) => {
   const lower = Math.ceil(Math.min(min, max));
@@ -26,7 +47,7 @@ const getRandomNumber = (min, max) => {
   return Math.floor(result);
 };
 
-function createRandom(min, max) {
+const createRandom = (min, max) => {
   const number = [];
 
   return function () {
@@ -37,13 +58,13 @@ function createRandom(min, max) {
     number.push(currentValue);
     return currentValue;
   };
-}
+};
 
-const generate = createRandom(1, 25);
+const generate = createRandom(Id.MIN, Id.MAX);
 
 const createComment = () => ({
   id: generate(),
-  avatar: `img/avatar-${getRandomNumber(1, 6)}svg`,
+  avatar: `img/avatar-${getRandomNumber(Avatar.MIN, Avatar.MAX)}svg`,
   message: messages[getRandomNumber(0, messages.length-1)],
   name: name[getRandomNumber(0, name.length - 1)]
 });
@@ -52,12 +73,12 @@ const createPhoto = () => ({
   id: generate(),
   url: `photos/${generate()}.jpg`,
   description: description[getRandomNumber(0, description.length - 1)],
-  likes: getRandomNumber(15, 200),
-  comments: Array.from({length: getRandomNumber(0, 30)}, createComment)
+  likes: getRandomNumber(Likes.MIN, Likes.MAX),
+  comments: Array.from({length: getRandomNumber(Comments.MIN, Comments.MAX)}, createComment)
 });
 
 const getPhoto = () => {
-  const photo = Array.from({length: 25}, createPhoto);
+  const photo = Array.from({length: COUNT_PHOTO}, createPhoto);
   return photo;
 };
 
