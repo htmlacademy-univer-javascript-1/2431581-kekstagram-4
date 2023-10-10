@@ -22,7 +22,7 @@ const COUNT_PHOTO = 25;
 const Id = {
   MIN: 1,
   MAX: 25
-}
+};
 
 const Likes = {
   MAX: 15,
@@ -32,12 +32,12 @@ const Likes = {
 const Comments = {
   MIN: 0,
   MAX: 30
-}
+};
 
 const Avatar = {
   MIN: 1,
   MAX: 6
-}
+};
 
 const getRandomNumber = (min, max) => {
   const lower = Math.ceil(Math.min(min, max));
@@ -58,7 +58,7 @@ const createRandom = (min, max) => {
     number.push(currentValue);
     return currentValue;
   };
-}
+};
 
 const generate = createRandom(Id.MIN, Id.MAX);
 
