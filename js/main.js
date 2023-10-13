@@ -77,9 +77,6 @@ const createPhoto = () => ({
   comments: Array.from({length: getRandomNumber(Comments.MIN, Comments.MAX)}, createComment)
 });
 
-const getPhoto = () => {
-  const photo = Array.from({length: COUNT_PHOTO}, createPhoto);
-  return photo;
-};
+const getPhoto = () => Array.from({length: COUNT_PHOTO}, createPhoto);
 
 getPhoto();
