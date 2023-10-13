@@ -1,5 +1,5 @@
-import { createRandom } from "./util.js";
-import { getRandomNumber } from "./util.js";
+import { createRandom } from './util.js';
+import { getRandomNumber } from './util.js';
 
 const messages = ['Всё отлично!',
   'В целом всё неплохо. Но не всё.',
