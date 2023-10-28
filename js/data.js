@@ -21,11 +21,6 @@ const description = [
 
 const COUNT_PHOTO = 25;
 
-const Id = {
-  MIN: 1,
-  MAX: 25
-};
-
 const Likes = {
   MAX: 15,
   MIN: 200
@@ -53,7 +48,7 @@ const createPhoto = (id) => ({
   url: `photos/${id}.jpg`,
   description: description[getRandomNumber(0, description.length - 1)],
   likes: getRandomNumber(Likes.MIN, Likes.MAX),
-  comments: Array.from({length: getRandomNumber(Comments.MIN, Comments.MAX)}).map((_, index) => createComment(index+1))
+  comments: Array.from({length: getRandomNumber(Comments.MIN, Comments.MAX)}).map((_, index) => createComment(index + 1))
 });
 
 
