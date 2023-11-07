@@ -1,4 +1,4 @@
-import { Keys } from "./const.js";
+import { Keys } from './const.js';
 
 const getRandomNumber = (min, max) => {
   const lower = Math.ceil(Math.min(min, max));

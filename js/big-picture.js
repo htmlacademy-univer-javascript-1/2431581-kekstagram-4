@@ -1,5 +1,5 @@
-import { closeOnEscKeyDown } from "./util.js";
-import { COMMENTS_STEP } from "./const.js";
+import { closeOnEscKeyDown } from './util.js';
+import { COMMENTS_STEP } from './const.js';
 
 const bigPicture = document.querySelector('.big-picture');
 const bigPictureImage = bigPicture.querySelector('.big-picture__img img');

@@ -27,11 +27,6 @@ const description = [
 
 const COUNT_PHOTO = 25;
 
-const Keys = {
-  ESCAPE: 'Escape',
-  ESC: 'Esc'
-};
-
 const Likes = {
   MAX: 15,
   MIN: 200
