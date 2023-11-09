@@ -38,7 +38,7 @@ const renderComments = () => {
     const textComment = document.createElement('p');
 
     newComment.classList.add('social__comment');
-    imgComment.classList.add('social--picture');
+    imgComment.classList.add('social__picture');
     textComment.classList.add('social__text');
 
     imgComment.src = comment.avatar;
