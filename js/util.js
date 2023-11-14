@@ -1,3 +1,5 @@
+import { Keys } from './const.js';
+
 const getRandomNumber = (min, max) => {
   const lower = Math.ceil(Math.min(min, max));
   const upper = Math.floor(Math.max(min, max));
@@ -17,6 +19,14 @@ const createRandom = (min, max) => {
     number.push(currentValue);
     return currentValue;
   };
+};
+
+const isEscapeKey = (evt) => evt.key === Keys.ESC || evt.key === Keys.ESCAPE;
+
+const closeOnEscKeyDown = (evt, cb) => {
+  if (isEscapeKey(evt)) {
+    cb();
+  }
 };
 
 const checkLenght = (inputString, maxLenght) => (inputString.length <= maxLenght);
@@ -41,4 +51,4 @@ const getCount = (inputParam) => {
   return parseInt(number, 10);
 };
 
-export {getRandomNumber, createRandom, checkLenght, isPalindrom, getCount};
+export {getRandomNumber, createRandom, checkLenght, isPalindrom, getCount, closeOnEscKeyDown};
