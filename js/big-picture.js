@@ -105,3 +105,4 @@ const showBigPicture = (picture) => {
 };
 
 export {showBigPicture};
+
