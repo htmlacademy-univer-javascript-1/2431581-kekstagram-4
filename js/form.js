@@ -1,4 +1,4 @@
-import { isEscapeKey } from "./util.js";
+import { isEscapeKey } from './util.js';
 
 const Zoom = {
   MIN: 25,
@@ -69,11 +69,11 @@ const changeZoom = (factor = 1) => {
 
 const onMinusButtonClick = () => {
   changeZoom(-1);
-}
+};
 
 const onPlusButtonClick = () => {
   changeZoom();
-}
+};
 
 minusButton.addEventListener('click', onMinusButtonClick);
 plusButton.addEventListener('click', onPlusButtonClick);
