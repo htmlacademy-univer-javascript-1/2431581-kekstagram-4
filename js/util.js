@@ -29,7 +29,7 @@ const closeOnEscKeyDown = (evt, cb) => {
   }
 };
 
-const checkLenght = (inputString, maxLenght) => (inputString.length <= maxLenght);
+const checkLenght = (inputString, maxLenght) => inputString.length <= maxLenght;
 
 const isPalindrom = (inputString) => {
   let reverseString = '';
@@ -51,4 +51,4 @@ const getCount = (inputParam) => {
   return parseInt(number, 10);
 };
 
-export {getRandomNumber, createRandom, checkLenght, isPalindrom, getCount, closeOnEscKeyDown};
+export {getRandomNumber, createRandom, checkLenght, isPalindrom, getCount, closeOnEscKeyDown, isEscapeKey};
