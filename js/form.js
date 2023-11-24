@@ -59,7 +59,7 @@ const onFileUploadChange = () => {
 
   document.addEventListener('keydown', onCloseFormEscKeyDown);
   sliderWrapper.classList.add('hidden');
-  effectList.addEventListener('change', onFilterButtonChange)
+  effectList.addEventListener('change', onFilterButtonChange);
 };
 
 fileUpload.addEventListener('change', onFileUploadChange);
