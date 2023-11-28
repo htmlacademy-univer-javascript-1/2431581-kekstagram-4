@@ -46,9 +46,6 @@ const changeImages = () => {
   const fileUrl = URL.createObjectURL(file);
 
   imagePreview.src = fileUrl;
-
-  /*effects.forEach((effect) => {
-    effect.style.backgroundImage = `url('${fileUrl}')`;*/
 };
 
 const onFileUploadChange = () => {
