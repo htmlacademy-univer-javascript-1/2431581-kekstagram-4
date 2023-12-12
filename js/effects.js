@@ -7,6 +7,18 @@ const effectList = document.querySelector('.effects__list');
 
 
 const Effects = {
+  none: {
+    filter: 'none',
+    unit: '',
+    options: {
+      range: {
+        min: 0,
+        max: 100
+      },
+      start: 100,
+      step: 1
+    }
+  },
   chrome: {
     filter: 'grayscale',
     units: '',
@@ -95,6 +107,7 @@ const onFilterButtonChange = (evt) => {
   if (evtHandler === 'none') {
     sliderWrapper.classList.add('hidden');
     imagePreview.style.filter = 'none';
+    imagePreview.removeAttribute('class');
   }
 
   else {
