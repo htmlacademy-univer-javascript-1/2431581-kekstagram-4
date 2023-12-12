@@ -11,13 +11,13 @@ const sendRequest = (onSuccess, onError, method, body) => {
       body: body,
     },
   )
-  .then((responce) => responce.json())
-  .then((data) => {
-    onSuccess(data);
-  })
-  .catch((err) => {
-    onError(err);
-  });
+    .then((responce) => responce.json())
+    .then((data) => {
+      onSuccess(data);
+    })
+    .catch((err) => {
+      onError(err);
+    });
 };
 const loadData = (onSuccess, onError, method = 'GET') => sendRequest(onSuccess, onError, method);
 

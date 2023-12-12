@@ -1,6 +1,6 @@
-import { closeForm } from "./form.js";
-import { isEscapeKey } from "./util.js"
-import { uploadData } from "./api.js";
+import { closeForm } from './form.js';
+import { isEscapeKey } from './util.js';
+import { uploadData } from './api.js';
 
 const errorMessage = document.querySelector('#error').content.querySelector('.error');
 const successMessage = document.querySelector('#success').content.querySelector('.success');

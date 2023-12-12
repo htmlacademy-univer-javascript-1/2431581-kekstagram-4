@@ -1,5 +1,5 @@
-import { MAX_HASHTAGS, MAX_SYMBOLS, MAX_STRING_LENGTH } from "./consts.js";
-import { checkLenght } from "./util.js";
+import { MAX_HASHTAGS, MAX_SYMBOLS, MAX_STRING_LENGTH } from './consts.js';
+import { checkLenght } from './util.js';
 
 const formUpload = document.querySelector('.img-upload__form');
 const submitButton = document.querySelector('.img-upload__submit');
