@@ -1,6 +1,6 @@
-import { debounce, shuffleArray } from './util.js'
-import { renderPictures, removePictures } from './pictures.js'
-import { photos } from './main.js'
+import { debounce, shuffleArray } from './util.js';
+import { renderPictures, removePictures } from './pictures.js';
+import { photos } from './main.js';
 
 const COUNT_OF_FILTER = 10;
 const ACTIVE_CLASS = 'img-filters__button--active';
